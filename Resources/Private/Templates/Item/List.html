@@ -1,0 +1,65 @@
+{namespace h=Tx_AlmPortfolio_ViewHelpers}
+
+<f:comment>
+Template Vars:
+settings
+categories
+category.title
+items
+item.title
+item.teaser
+item.description
+item.client
+item.url
+item.cat
+item.images
+
+Link to Detail Page:
+pageUid="{settings.flexform.detailPage}"
+additionalParams="{tx_almportfolio_portfoliofront: '{item: item.uid}'}"
+
+Labels:
+more => tx_almportfolio_modul_portfoliofront.more
+back => tx_almportfolio_modul_portfoliofront.back
+link => tx_almportfolio_modul_portfoliofront.link
+</f:comment>
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages />
+
+<div>
+	<f:for each="{categories}" as="category">
+		{category.title}
+	</f:for>
+</div>
+
+<div>
+	<f:for each="{items}" as="item">
+		<div>
+			<div><b>{item.title}</b></div>
+			<div>{item.teaser}</div>
+			<div>
+				<f:for each="{item.images}" as="image" iteration="count">
+					<f:if condition="{count.cycle} == 1">
+						<div>
+							<a class="lightbox" href="{image.originalResource.publicUrl}" title="{item.title} - {count.cycle}" rel="lightbox">
+								<f:image src="{image.uid}" alt="{item.title} - {count.cycle}" treatIdAsReference="true" maxWidth="{settings.imgList.width}" maxHeight="{settings.imgList.height}" alt="{item.title} - {count.cycle}" title="{item.title} - {count.cycle}" />
+							</a>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+			<div>
+				<f:for each="{item.cat}" as="cat">
+					<span>{cat.title}</span>
+				</f:for>
+			</div>
+			<div><f:link.page pageUid="{settings.flexform.detailPage}" additionalParams="{tx_almportfolio_portfoliofront: '{item: item.uid}'}"><f:translate id="tx_almportfolio_modul_portfoliofront.more">More</f:translate></f:link.page></div>
+		</div>
+	</f:for>
+</div>
+
+</f:section>

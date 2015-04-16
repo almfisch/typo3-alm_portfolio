@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T10:49:43Z" product-name="alm_portfolio">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>Title - the title of the category</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Description - a short description of the category</source>
+			</trans-unit>
+			<trans-unit id="parent_cat.description">
+				<source>Parent Category - select a parent category, if the category is a subcategory</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

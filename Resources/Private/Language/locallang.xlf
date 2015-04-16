@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T10:49:43Z" product-name="alm_portfolio">
+		<header/>
+		<body>
+			<trans-unit id="tx_almportfolio_ext_title">
+				<source>Portfolio</source>
+			</trans-unit>
+			<trans-unit id="tx_almportfolio_ext_description">
+				<source>Portfolio - show your work</source>
+			</trans-unit>
+
+			<trans-unit id="tx_almportfolio_modul_portfoliofront.more">
+				<source>More</source>
+			</trans-unit>
+			<trans-unit id="tx_almportfolio_modul_portfoliofront.back">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="tx_almportfolio_modul_portfoliofront.link">
+				<source>Link</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

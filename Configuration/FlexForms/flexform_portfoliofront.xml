@@ -1,0 +1,341 @@
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.sheet_1</sheetTitle>
+					<sheetDescription>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.sheet_desc_1</sheetDescription>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.type_label</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.type_1</numIndex>
+										<numIndex index="1">Item->list</numIndex>
+									</numIndex>
+									<!--
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.type_2</numIndex>
+										<numIndex index="1">Item->cloud</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.type_3</numIndex>
+										<numIndex index="1">Item->menu</numIndex>
+									</numIndex>
+									-->
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.type_4</numIndex>
+										<numIndex index="1">Item->detail</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+
+					<settings.flexform.templateFile>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.templateFile</label>
+								<config type="array">
+									<type>select</type>
+									<itemsProcFunc>Alm\almPortfolio\Utility\ItemsProcFunc->templateList</itemsProcFunc>
+									<maxitems>1</maxitems>
+									<size>1</size>
+								</config>
+						</TCEforms>
+					</settings.flexform.templateFile>
+
+					<settings.flexform.listPage>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.listPage</label>
+							<displayCond>FIELD:switchableControllerActions:IN:Item->cloud,Item->menu</displayCond>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.flexform.listPage>
+
+					<settings.flexform.detailPage>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.detailPage</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.flexform.detailPage>
+
+					<!--
+					<persistence.storagePid>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:lang/locallang_general.xml:LGL.startingpoint</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>3</size>
+								<maxitems>20</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</persistence.storagePid>
+					-->
+				</el>
+			</ROOT>
+		</sDEF>
+
+		<sSEC>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.sheet_2</sheetTitle>
+					<sheetDescription>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.sheet_desc_2</sheetDescription>
+					<displayCond>FIELD:sDEF.switchableControllerActions:IN:,Item->list</displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.order>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.order</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">uid</numIndex>
+										<numIndex index="1">uid</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">title</numIndex>
+										<numIndex index="1">title</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">client</numIndex>
+										<numIndex index="1">client</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>3</maxitems>
+								<size>3</size>
+							</config>
+						</TCEforms>
+					</settings.flexform.order>
+
+					<settings.flexform.orderDirection>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.orderDirection</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">ASC</numIndex>
+										<numIndex index="1">ASC</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">DESC</numIndex>
+										<numIndex index="1">DESC</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.flexform.orderDirection>
+
+					<settings.flexform.random>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.random</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.no</numIndex>
+										<numIndex index="1">no</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.yes</numIndex>
+										<numIndex index="1">yes</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<default>no</default>
+							</config>
+						</TCEforms>
+					</settings.flexform.random>
+
+					<settings.flexform.maxResults>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.maxResults</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>input</type>
+								<eval>int,trim</eval>
+								<size>12</size>
+							</config>
+						</TCEforms>
+					</settings.flexform.maxResults>
+
+					<settings.flexform.logicalOperator>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.logicalOperator</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.and</numIndex>
+										<numIndex index="1">and</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.or</numIndex>
+										<numIndex index="1">or</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<default>and</default>
+							</config>
+						</TCEforms>
+					</settings.flexform.logicalOperator>
+
+					<settings.flexform.includeSub>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.includeSub</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.no</numIndex>
+										<numIndex index="1">no</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.yesStart</numIndex>
+										<numIndex index="1">yesStart</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.yesSub</numIndex>
+										<numIndex index="1">yesSub</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<default>no</default>
+							</config>
+						</TCEforms>
+					</settings.flexform.includeSub>
+
+					<settings.flexform.cat>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.cat</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list,Item->cloud,Item->menu</displayCond>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_almportfolio_domain_model_cat</foreign_table>
+								<foreign_table_where> AND tx_almportfolio_domain_model_cat.pid = (SELECT pages FROM tt_content WHERE uid=###THIS_UID###)</foreign_table_where>
+								<renderMode>tree</renderMode>
+								<subType>db</subType>
+								<treeConfig>
+									<parentField>parent_cat</parentField>
+									<appearance>
+										<expandAll>1</expandAll>
+										<showHeader>0</showHeader>
+										<maxLevels>99</maxLevels>
+									</appearance>
+								</treeConfig>
+								<size>10</size>
+								<autoSizeMax>20</autoSizeMax>
+								<minitems>0</minitems>
+								<maxitems>99</maxitems>
+							</config>
+						</TCEforms>
+					</settings.flexform.cat>
+
+					<settings.flexform.excludeItems>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.excludeItems</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list,Item->cloud,Item->menu</displayCond>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_almportfolio_domain_model_item</foreign_table>
+								<foreign_table_where> AND tx_almportfolio_domain_model_item.pid = (SELECT pages FROM tt_content WHERE uid=###THIS_UID###)</foreign_table_where>
+								<size>10</size>
+								<autoSizeMax>20</autoSizeMax>
+								<minitems>0</minitems>
+								<maxitems>99</maxitems>
+							</config>
+						</TCEforms>
+					</settings.flexform.excludeItems>
+				</el>
+			</ROOT>
+		</sSEC>
+
+		<sTRD>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.sheet_3</sheetTitle>
+					<sheetDescription>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.sheet_desc_3</sheetDescription>
+					<displayCond>FIELD:sDEF.switchableControllerActions:IN:,Item->list</displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.customSelect>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.customSelect</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list,Item->cloud,Item->menu</displayCond>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_almportfolio_domain_model_item</foreign_table>
+								<foreign_table_where> AND tx_almportfolio_domain_model_item.pid = (SELECT pages FROM tt_content WHERE uid=###THIS_UID###)</foreign_table_where>
+								<size>10</size>
+								<autoSizeMax>20</autoSizeMax>
+								<minitems>0</minitems>
+								<maxitems>99</maxitems>
+							</config>
+						</TCEforms>
+					</settings.flexform.customSelect>
+				</el>
+			</ROOT>
+		</sTRD>
+	</sheets>
+</T3DataStructure>

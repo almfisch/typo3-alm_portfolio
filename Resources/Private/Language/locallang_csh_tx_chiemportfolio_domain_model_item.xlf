@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T10:49:43Z" product-name="alm_portfolio">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>Title - the title of your portfolio item</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>Teaser - a short teaser for list views</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Description - all detail about the portfolio item</source>
+			</trans-unit>
+			<trans-unit id="client.description">
+				<source>Client - name of the client</source>
+			</trans-unit>
+			<trans-unit id="url.description">
+				<source>URL - link to the website or something else</source>
+			</trans-unit>
+			<trans-unit id="cat.description">
+				<source>Category - select the categories for the portfolio item</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>Images - some images, screenshots and so on</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

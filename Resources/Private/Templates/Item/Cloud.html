@@ -1,0 +1,25 @@
+{namespace h=Tx_AlmPortfolio_ViewHelpers}
+
+<f:comment>
+Template Vars:
+settings
+tags
+tag.title
+item.description
+</f:comment>
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages />
+
+<div>
+	<ul>
+		<f:for each="{tags}" as="tag">
+			<li>{tag.title}</li>
+		</f:for>
+	</ul>
+</div>
+
+</f:section>

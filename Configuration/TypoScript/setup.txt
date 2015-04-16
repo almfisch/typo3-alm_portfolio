@@ -1,0 +1,26 @@
+plugin.tx_almportfolio {
+	view {
+		templateRootPath = {$plugin.tx_almportfolio.view.templateRootPath}
+		partialRootPath = {$plugin.tx_almportfolio.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_almportfolio.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_almportfolio.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+		# template.list = fileadmin/template/portfolio_list.html
+		# template.cloud = fileadmin/template/portfolio_cloud.html
+		# template.menu = fileadmin/template/portfolio_menu.html
+		# template.detail = fileadmin/template/portfolio_detail.html
+		# template.select.1 = fileadmin/template/portfolio_list_1.html
+		# template.select.2 = fileadmin/template/portfolio_list_2.html
+		imgList.width = 160
+		imgList.height = 80
+		imgDetail.width = 320
+		imgDetail.height = 160
+	}
+}

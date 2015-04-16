@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T10:49:43Z" product-name="alm_portfolio">
+		<header/>
+		<body>
+			<trans-unit id="settings.flexform.order.description">
+				<source>Order - select one or more fields for the order</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.orderDirection.description">
+				<source>Order Direction - the direction of the order</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.random.description">
+				<source>Random - random order</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.maxResults.description">
+				<source>Max Results - any number or empty for no limit</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.logicalOperator.description">
+				<source>Logical Operator - if multiple categories selected, this operator change the result</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.includeSub.description">
+				<source>Include Subcategories - include all subcategories with or without start category</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.cat.description">
+				<source>Categories - select categories to show portfolio items</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.customSelect.description">
+				<source>Custom Selection - select items manually, overwrites cat selection</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.excludeItems.description">
+				<source>Exclude - select items to exclude from list</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.listPage.description">
+				<source>List Page - select the page of the list view</source>
+			</trans-unit>
+			<trans-unit id="settings.flexform.detailPage.description">
+				<source>Detail Page - select the page of the detail view</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
