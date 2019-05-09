@@ -101,6 +101,9 @@
 			<trans-unit id="tx_almportfolio_modul_portfoliofront.flexform.type_4">
 				<source>Detail</source>
 			</trans-unit>
+			<trans-unit id="tx_almportfolio_modul_portfoliofront.flexform.headline">
+				<source>Headline</source>
+			</trans-unit>
 			<trans-unit id="tx_almportfolio_modul_portfoliofront.flexform.templateFile">
 				<source>Template</source>
 			</trans-unit>

@@ -73,14 +73,14 @@ $GLOBALS['TCA']['tx_almportfolio_domain_model_item'] = array(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tt_content.pi_flexform.almportfolio_portfoliofront.list', 'EXT:alm_portfolio/Resources/Private/Language/locallang_csh_flexform.xlf');
 
 
-$extensionName = t3lib_div::underscoredToUpperCamelCase($_EXTKEY);
+$extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
 $pluginSignature = strtolower($extensionName) . '_portfoliofront';
 //$TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages,recursive';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-t3lib_extMgm::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/flexform_portfoliofront.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/flexform_portfoliofront.xml');
 
 
 if(TYPO3_MODE == 'BE')
 {
-	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_almportfolio_wizicon'] = t3lib_extMgm::extPath($_EXTKEY).'Classes/Hooks/class.tx_almportfolio_wizicon.php';
+	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['tx_almportfolio_wizicon'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'Classes/Hooks/class.tx_almportfolio_wizicon.php';
 }

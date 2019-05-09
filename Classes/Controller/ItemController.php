@@ -60,6 +60,7 @@ class ItemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	function initializeAction()
 	{
 		$this->config = $this->configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManager::CONFIGURATION_TYPE_FRAMEWORK);
+		$this->cObj = $this->configurationManager->getContentObject()->data;
 	}
 
 
@@ -128,6 +129,7 @@ class ItemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			}
 		}
 
+		$this->view->assign('cObj', $this->cObj);
 		$this->view->assign('settings', $this->settings);
 		if($categories)
 		{

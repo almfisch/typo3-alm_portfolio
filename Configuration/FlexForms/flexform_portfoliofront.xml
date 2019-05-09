@@ -42,6 +42,18 @@
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
+					
+					<settings.flexform.headline>
+						<TCEforms>
+							<label>LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xml:tx_almportfolio_modul_portfoliofront.flexform.headline</label>
+							<displayCond>FIELD:switchableControllerActions:IN:,Item->list</displayCond>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+								<size>30</size>
+							</config>
+						</TCEforms>
+					</settings.flexform.headline>
 
 					<settings.flexform.templateFile>
 						<TCEforms>
