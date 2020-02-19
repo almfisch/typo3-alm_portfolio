@@ -36,7 +36,7 @@ $GLOBALS['TCA']['tx_almportfolio_domain_model_cat'] = array(
 		),
 		'searchFields' => 'title,description,parent_cat,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Cat.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_almportfolio_domain_model_cat.gif'
+		'iconfile' => 'EXT:alm_portfolio/Resources/Public/Icons/tx_almportfolio_domain_model_cat.gif'
 	),
 );
 
@@ -65,7 +65,7 @@ $GLOBALS['TCA']['tx_almportfolio_domain_model_item'] = array(
 		),
 		'searchFields' => 'title,teaser,description,client,url,cat,images,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Item.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_almportfolio_domain_model_item.gif'
+		'iconfile' => 'EXT:alm_portfolio/Resources/Public/Icons/tx_almportfolio_domain_model_item.gif'
 	),
 );
 

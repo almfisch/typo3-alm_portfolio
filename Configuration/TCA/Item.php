@@ -21,6 +21,7 @@ $GLOBALS['TCA']['tx_almportfolio_domain_model_item'] = array(
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
 			'config' => array(
 				'type' => 'select',
+				'renderType' => 'selectSingle',
 				'foreign_table' => 'sys_language',
 				'foreign_table_where' => 'ORDER BY sys_language.title',
 				'items' => array(
@@ -124,17 +125,8 @@ $GLOBALS['TCA']['tx_almportfolio_domain_model_item'] = array(
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'script' => 'wizard_rte.php',
-						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
 			),
+			'defaultExtras' => 'richtext[strong|emphasis]:rte_transform[ts]',
 		),
 		'client' => array(
 			'exclude' => 1,
@@ -159,9 +151,9 @@ $GLOBALS['TCA']['tx_almportfolio_domain_model_item'] = array(
 			'label' => 'LLL:EXT:alm_portfolio/Resources/Private/Language/locallang_db.xlf:tx_almportfolio_domain_model_item.cat',
 			'config' => array(
 				'type' => 'select',
+				'renderType' => 'selectTree',
 				'foreign_table' => 'tx_almportfolio_domain_model_cat',
 				'foreign_table_where' => ' AND tx_almportfolio_domain_model_cat.pid = ###CURRENT_PID###',
-				'renderMode' => 'tree',
 				'subType' => 'db',
 				'treeConfig' => array(
 					'parentField' => 'parent_cat',

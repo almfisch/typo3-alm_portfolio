@@ -47,7 +47,16 @@ link => tx_almportfolio_modul_portfoliofront.link
 			</div>
 		</f:for>
 	</div>
-	<div><f:link.external uri="javascript: history.back();"><f:translate id="tx_almportfolio_modul_portfoliofront.back">Back</f:translate></f:link.external></div>
+	<div>
+		<f:if condition="{settings.flexform.listPage}">
+			<f:then>
+				<f:link.page pageUid="{settings.flexform.listPage}"><f:translate id="tx_almportfolio_modul_portfoliofront.back">Back</f:translate></f:link.page>
+			</f:then>
+			<f:else>
+				<f:link.external uri="javascript: history.back();"><f:translate id="tx_almportfolio_modul_portfoliofront.back">Back</f:translate></f:link.external>
+			</f:else>
+		</f:if>
+	</div>
 </div>
 
 </f:section>
